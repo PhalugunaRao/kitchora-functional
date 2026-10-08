@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background text-on-surface antialiased" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kitchora Studio — Penthouse L-Shaped Kitchen Customizer</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#b6d088",
+            "surface-container-low": "#f5f3f0",
+            "surface-bright": "#fbf9f6",
+            "primary": "#322214",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#fbf9f6",
+            "inverse-surface": "#30312f",
+            "primary-fixed-dim": "#dec1ac",
+            "outline-variant": "#d2c4bb",
+            "inverse-on-surface": "#f2f0ed",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#dec1ac",
+            "on-background": "#1b1c1a",
+            "surface-container-highest": "#e4e2df",
+            "surface-variant": "#e4e2df",
+            "on-surface": "#1b1c1a",
+            "on-primary": "#ffffff",
+            "secondary-container": "#fedeb2",
+            "on-secondary-fixed-variant": "#584323",
+            "on-tertiary-container": "#95ae6a",
+            "primary-container": "#4a3728",
+            "on-tertiary-fixed-variant": "#394d14",
+            "surface-container-high": "#eae8e5",
+            "secondary-fixed": "#fedeb2",
+            "surface-dim": "#dbdad7",
+            "outline": "#80756d",
+            "surface-tint": "#705a49",
+            "on-primary-container": "#bba08c",
+            "on-surface-variant": "#4e453e",
+            "on-primary-fixed-variant": "#574333",
+            "background": "#fbf9f6",
+            "tertiary-container": "#2d4108",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#e0c298",
+            "on-primary-fixed": "#28180b",
+            "on-secondary-fixed": "#281800",
+            "tertiary-fixed": "#d2eca2",
+            "on-secondary": "#ffffff",
+            "surface-container": "#efeeeb",
+            "tertiary": "#1a2a00",
+            "on-tertiary-fixed": "#131f00",
+            "on-secondary-container": "#78603e",
+            "on-error-container": "#93000a",
+            "secondary": "#725b38",
+            "primary-fixed": "#fbddc7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "gutter-desktop": "2.5rem",
+            "margin-desktop": "4rem",
+            "margin-tablet": "2.5rem",
+            "space-xs": "0.375rem",
+            "margin": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "2rem",
+            "space-xl": "3.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "display-hero": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-numeric-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-numeric-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f5f3f0;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d2c4bb;
+      border-radius: 2px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #80756d;
+    }
+  </style>
+<link rel="stylesheet" href="assets/app.css"/></head>
+<body class="h-full flex flex-col overflow-hidden bg-background font-body-md text-on-surface">
+<!-- TOP APP BAR / CAD STUDIO HEADER -->
+<header class="bg-surface border-b border-outline-variant shrink-0 z-30 shadow-sm">
+<div class="w-full px-6 mx-auto h-16 flex items-center justify-between">
+<!-- Brand & Project Meta -->
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-3">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">Kitchora</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase border border-outline-variant">Studio CAD</span>
+</div>
+<div class="h-6 w-px bg-outline-variant"></div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-outline text-[18px]">architecture</span>
+<span class="font-title-md text-title-md text-on-surface">Penthouse L-Shaped Kitchen · 120 sq.ft</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg text-xs font-label-sm bg-surface-container text-outline">v2.4 Live Sync</span>
+</div>
+</div>
+<!-- Camera Angle Viewport Controls -->
+<div class="hidden lg:flex items-center bg-surface-container-low p-1 rounded-lg border border-outline-variant shadow-inner">
+<button class="camera-btn px-3 py-1.5 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="view-front" onclick="switchView('Front View')">
+          Front View
+        </button>
+<button class="camera-btn px-3 py-1.5 rounded-lg text-label-sm font-label-sm transition-all duration-150 bg-surface-container-lowest text-primary shadow-sm font-semibold" id="view-island" onclick="switchView('Island Angle')">
+          Island Angle
+        </button>
+<button class="camera-btn px-3 py-1.5 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="view-iso" onclick="switchView('3D Isometric')">
+          3D Isometric
+        </button>
+<button class="camera-btn px-3 py-1.5 rounded-lg text-label-sm font-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="view-floor" onclick="switchView('2D Floor Plan')">
+          2D Floor Plan
+        </button>
+</div>
+<!-- Trailing Action Controls -->
+<div class="flex items-center space-x-3">
+<!-- Fullscreen toggle -->
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg border border-transparent hover:border-outline-variant transition-all" onclick="toggleFullScreen()" title="Full Screen Canvas">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+<!-- Save indicator -->
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg border border-transparent hover:border-outline-variant transition-all" title="Quick Cloud Save">
+<span class="material-symbols-outlined text-[20px]">cloud_done</span>
+</button>
+<!-- Export PDF spec CTA -->
+<button class="flex items-center space-x-2 bg-primary hover:bg-primary-container text-on-primary px-4 py-2 rounded-lg transition-all duration-200 shadow-sm border border-primary">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">Export Architectural Spec PDF</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN WORKSTATION (70% Canvas / 30% Inspector) -->
+<main class="flex-1 flex overflow-hidden relative">
+<!-- LEFT AREA: INTERACTIVE 3D/CANVAS VIEWPORT (70%) -->
+<section class="flex-1 lg:w-[70%] h-full relative bg-surface-container-lowest flex flex-col justify-between overflow-hidden">
+<!-- Top Canvas HUD Overlays -->
+<div class="absolute top-4 left-6 right-6 z-20 flex justify-between items-start pointer-events-none">
+<!-- Lighting & Environment Mode pill -->
+<div class="pointer-events-auto flex items-center space-x-2 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-outline-variant shadow-sm text-label-sm font-label-sm text-on-surface">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Photometric Sun (14:30 Natural Daylight)</span>
+<span class="text-outline">·</span>
+<span class="text-secondary font-semibold">2700K Warm Bounce</span>
+</div>
+<!-- Render Viewport Gizmo Tools -->
+<div class="pointer-events-auto flex items-center space-x-1 bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded-lg border border-outline-variant shadow-sm">
+<button class="p-1.5 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="Rotate View">
+<span class="material-symbols-outlined text-[18px]">3d_rotation</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="Pan Environment">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+</button>
+<button class="p-1.5 bg-surface-container text-primary rounded transition-colors" title="Dimension Laser Grid">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+</button>
+<div class="w-px h-4 bg-outline-variant mx-1"></div>
+<button class="p-1.5 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="Reset Camera">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- 3D Studio Visual Kitchen Render Canvas -->
+<div class="w-full h-full relative flex items-center justify-center select-none overflow-hidden bg-[#E8E2D9]">
+<!-- High-fidelity Master Kitchen Architecture Image -->
+<img class="w-full h-full object-cover object-center pointer-events-none" data-alt="A luxurious bespoke penthouse kitchen rendered in photorealistic architectural clarity with warm sunlight streaming across honed Calacatta gold marble countertops and dark rich walnut fluted tall cabinetry. In the center, a monumental kitchen island with seamless brass profile channels and subtle recessed warm ambient lighting showcases meticulous European joinery craft. In the background, handcrafted pearl glazed zellige tile reflects gentle daylight. Minimalist, uncluttered composition with dignified warm umber tones, organic natural materials, and authentic high-end architectural finish quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLEM_WxjwMbf4zSNFnD-0N_NCu8HVrek8BK0qLiFNXQEDQPqFNHI5eLdg4l8G4NzhlQzDIvg1AXLK-AI5MABlMcCqd9NTcfQYUVH7ToCPBj5nthLefQQmcTiKu7eitmjpRdinkLltsQP6lKrATah2v6NkzhN7GUIJIQpXTRLHi5WxJoPT9qrkHszPicoZTxyUDinudKJ5FRF0gP4yfYs2YCJIMENdh7OR3Jz1gtDON"/>
+<!-- Subtle architectural grid overlay for CAD effect -->
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-primary/5 to-primary/20 pointer-events-none"></div>
+<!-- HOTSPOT PIN 1: Tall Walnut Fluted Veneer -->
+<div class="absolute top-[28%] left-[22%] z-20 group">
+<div class="relative cursor-pointer">
+<span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-on-primary font-label-caps text-[10px] shadow-lg border border-secondary-fixed ring-4 ring-primary/20 hover:scale-110 transition-transform">
+              1
+            </span>
+<!-- Popover Spec Tooltip -->
+<div class="absolute bottom-9 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col w-56 p-3 bg-surface-container-lowest/95 backdrop-blur-md rounded-lg shadow-xl border border-outline-variant transition-all">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Hotspot 01 · Millwork</span>
+<p class="font-title-md text-title-md text-primary mt-0.5">Walnut Fluted Veneer</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tall full-height pantry casework with sound-dampened soft close hinges.</p>
+<div class="mt-2 pt-2 border-t border-outline-variant flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Tier 1 Bespoke</span>
+<span class="font-bold text-primary">+₹1,45,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 2: Calacatta Gold Quartz Countertop -->
+<div class="absolute top-[52%] left-[48%] z-20 group">
+<div class="relative cursor-pointer">
+<span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-on-primary font-label-caps text-[10px] shadow-lg border border-secondary-fixed ring-4 ring-primary/20 hover:scale-110 transition-transform">
+              2
+            </span>
+<!-- Popover Spec Tooltip -->
+<div class="absolute bottom-9 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col w-60 p-3 bg-surface-container-lowest/95 backdrop-blur-md rounded-lg shadow-xl border border-outline-variant transition-all">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Hotspot 02 · Island Surface</span>
+<p class="font-title-md text-title-md text-primary mt-0.5">Calacatta Gold Quartz</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">20mm Beveled Edge, book-matched waterfall transition island.</p>
+<div class="mt-2 pt-2 border-t border-outline-variant flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Engineered Quartz</span>
+<span class="font-bold text-primary">+₹1,18,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 3: Zellige Pearl Glazed Backsplash -->
+<div class="absolute top-[36%] left-[64%] z-20 group">
+<div class="relative cursor-pointer">
+<span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-on-primary font-label-caps text-[10px] shadow-lg border border-secondary-fixed ring-4 ring-primary/20 hover:scale-110 transition-transform">
+              3
+            </span>
+<!-- Popover Spec Tooltip -->
+<div class="absolute bottom-9 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col w-56 p-3 bg-surface-container-lowest/95 backdrop-blur-md rounded-lg shadow-xl border border-outline-variant transition-all">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Hotspot 03 · Splashback</span>
+<p class="font-title-md text-title-md text-primary mt-0.5">Zellige Pearl Glazed</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hand-cast Moroccan artisan tiles with slight undulating light refraction.</p>
+<div class="mt-2 pt-2 border-t border-outline-variant flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Handmade Ceramic</span>
+<span class="font-bold text-primary">+₹42,500</span>
+</div>
+</div>
+</div>
+</div>
+<!-- HOTSPOT PIN 4: Brushed Brass Concealed J-Profile -->
+<div class="absolute top-[68%] left-[40%] z-20 group">
+<div class="relative cursor-pointer">
+<span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-on-primary font-label-caps text-[10px] shadow-lg border border-secondary-fixed ring-4 ring-primary/20 hover:scale-110 transition-transform">
+              4
+            </span>
+<!-- Popover Spec Tooltip -->
+<div class="absolute bottom-9 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col w-60 p-3 bg-surface-container-lowest/95 backdrop-blur-md rounded-lg shadow-xl border border-outline-variant transition-all">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Hotspot 04 · Joinery</span>
+<p class="font-title-md text-title-md text-primary mt-0.5">Brushed Brass J-Profile</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Continuous finger-pull channel, satin lacquer anti-fingerprint coating.</p>
+<div class="mt-2 pt-2 border-t border-outline-variant flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">Solid Extruded Brass</span>
+<span class="font-bold text-primary">+₹63,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Dimension Callouts (Architectural Elevation Lines) -->
+<div class="absolute bottom-24 left-10 pointer-events-none hidden xl:flex items-center space-x-3 bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-outline-variant/60 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">straighten</span>
+<span>Elevation Span: <strong class="text-primary font-semibold">3,600 mm</strong></span>
+<span class="text-outline">|</span>
+<span>Counter Depth: <strong class="text-primary font-semibold">650 mm</strong></span>
+<span class="text-outline">|</span>
+<span>Plinth: <strong class="text-primary font-semibold">100 mm Recessed</strong></span>
+</div>
+</div>
+<!-- BOTTOM CANVAS FLOATING OVERLAY: Real-Time Cost & Spec Summary -->
+<div class="absolute bottom-6 left-6 right-6 z-20 flex flex-col md:flex-row items-center justify-between gap-4 pointer-events-none">
+<!-- Live Real-Time Cost Indicator Card -->
+<div class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant rounded-xl p-4 shadow-xl flex items-center space-x-6">
+<div class="space-y-0.5">
+<div class="flex items-center space-x-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Estimated Investment</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Tier A Direct Studio</span>
+</div>
+<div class="flex items-baseline space-x-2">
+<span class="font-label-numeric-lg text-label-numeric-lg text-primary tracking-tight font-bold">₹3,68,500</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">incl. fabrication &amp; white-glove installation</span>
+</div>
+</div>
+<div class="h-10 w-px bg-outline-variant hidden sm:block"></div>
+<!-- Interactive Cost Breakdown popover trigger -->
+<div class="relative">
+<button class="flex items-center space-x-1.5 px-3 py-2 bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm rounded-lg border border-outline-variant transition-colors" onclick="toggleCostModal()">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Cost Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">expand_less</span>
+</button>
+<!-- Cost Breakdown Popover Dropup (Hidden by default, toggled via JS) -->
+<div class="hidden absolute bottom-12 right-0 w-80 bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-2xl z-50" id="cost-popover">
+<div class="flex justify-between items-center pb-2 border-b border-outline-variant">
+<span class="font-title-md text-title-md text-primary font-semibold">Itemized Bill of Materials</span>
+<button class="text-outline hover:text-primary" onclick="toggleCostModal()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="py-2 space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Birch Ply Carcass Structure</span>
+<span class="font-semibold text-primary">₹68,000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Walnut Fluted Veneer Fronts</span>
+<span class="font-semibold text-primary">₹1,45,000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Calacatta Quartz Slabs &amp; Mitering</span>
+<span class="font-semibold text-primary">₹1,18,000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Gola J-Profile Brass Channels</span>
+<span class="font-semibold text-primary">₹24,500</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Under-Cabinet 2700K LED Channels</span>
+<span class="font-semibold text-primary">₹13,000</span>
+</div>
+<div class="pt-2 border-t border-outline-variant flex justify-between font-bold text-title-md text-primary">
+<span>Total (Taxes &amp; Fitting Included)</span>
+<span>₹3,68,500</span>
+</div>
+</div>
+<p class="text-[11px] font-label-sm text-outline mt-2 italic">Spec locked for 30 calendar days upon receipt of sample kit.</p>
+</div>
+</div>
+</div>
+<!-- Material Quick Inspection Carousel -->
+<div class="pointer-events-auto hidden xl:flex items-center space-x-2 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-2 rounded-xl border border-outline-variant shadow-md">
+<span class="font-label-caps text-label-caps text-outline uppercase mr-1">Active Swatches</span>
+<div class="w-7 h-7 rounded border-2 border-primary bg-[#4A3728] shadow-sm" title="Warm Walnut Veneer"></div>
+<div class="w-7 h-7 rounded border border-outline-variant bg-[#F5F3ED]" title="Calacatta Gold Quartz"></div>
+<div class="w-7 h-7 rounded border border-outline-variant bg-[#C5A880]" title="Patinated Satin Brass"></div>
+<div class="w-7 h-7 rounded border border-outline-variant bg-[#EFECE6]" title="Pearl Zellige Glaze"></div>
+</div>
+</div>
+</section>
+<!-- RIGHT AREA: FIXED/SCROLLABLE CONFIGURATION INSPECTOR PANEL (30%) -->
+<aside class="w-full lg:w-[30%] min-w-[360px] max-w-[460px] h-full bg-surface-container-lowest border-l border-outline-variant flex flex-col z-20 shadow-lg">
+<!-- Panel Header & Navigation Tabs -->
+<div class="p-4 border-b border-outline-variant shrink-0 bg-surface">
+<div class="flex items-center justify-between mb-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Studio Inspector</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Customize bespoke millwork finishes</p>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant text-label-caps font-label-caps">
+            Specifier Mode
+          </span>
+</div>
+<!-- Inspector Modular Navigation Tabs -->
+<div class="grid grid-cols-4 gap-1 p-1 bg-surface-container rounded-lg border border-outline-variant text-center">
+<button class="tab-pill py-2 text-[11px] font-label-sm font-semibold rounded transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-btn-cabinets" onclick="switchInspectorTab('cabinets')">
+            Cabinets
+          </button>
+<button class="tab-pill py-2 text-[11px] font-label-sm transition-all text-on-surface-variant hover:text-primary" id="tab-btn-stone" onclick="switchInspectorTab('stone')">
+            Stone
+          </button>
+<button class="tab-pill py-2 text-[11px] font-label-sm transition-all text-on-surface-variant hover:text-primary" id="tab-btn-joinery" onclick="switchInspectorTab('joinery')">
+            Joinery
+          </button>
+<button class="tab-pill py-2 text-[11px] font-label-sm transition-all text-on-surface-variant hover:text-primary" id="tab-btn-lighting" onclick="switchInspectorTab('lighting')">
+            Lighting
+          </button>
+</div>
+</div>
+<!-- Scrollable Tab Modules Container -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-5 space-y-6">
+<!-- TAB 1 CONTENT: Cabinet Finishes & Veneers -->
+<div class="tab-content-pane space-y-6" id="tab-content-cabinets">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-secondary block mb-2 font-bold">1. Primary Cabinet Core &amp; Veneer</label>
+<div class="grid grid-cols-2 gap-3">
+<!-- Swatch: Warm Walnut -->
+<div class="group relative p-3 rounded-lg border-2 border-primary bg-surface-container-low cursor-pointer shadow-sm">
+<div class="w-full h-16 rounded bg-[#4A3728] mb-2.5 shadow-inner border border-outline-variant flex items-end justify-end p-1.5">
+<span class="material-symbols-outlined text-white text-[16px]">check_circle</span>
+</div>
+<div class="font-title-md text-title-md text-primary font-semibold">Warm Walnut</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Crown-Cut Architectural</div>
+<span class="inline-block mt-2 font-label-sm text-label-sm text-primary font-bold">Included</span>
+</div>
+<!-- Swatch: Smoked Charcoal -->
+<div class="group relative p-3 rounded-lg border border-outline-variant hover:border-primary/50 bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="w-full h-16 rounded bg-[#2B2927] mb-2.5 shadow-inner border border-outline-variant"></div>
+<div class="font-title-md text-title-md text-primary font-semibold">Smoked Charcoal</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Brushed European Oak</div>
+<span class="inline-block mt-2 font-label-sm text-label-sm text-outline">+₹18,000</span>
+</div>
+<!-- Swatch: Nordic White -->
+<div class="group relative p-3 rounded-lg border border-outline-variant hover:border-primary/50 bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="w-full h-16 rounded bg-[#ECE8E1] mb-2.5 shadow-inner border border-outline-variant"></div>
+<div class="font-title-md text-title-md text-primary font-semibold">Nordic White</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Bleached Ash Grain</div>
+<span class="inline-block mt-2 font-label-sm text-label-sm text-outline">-₹12,000</span>
+</div>
+<!-- Swatch: Sage Olive -->
+<div class="group relative p-3 rounded-lg border border-outline-variant hover:border-primary/50 bg-surface-container-lowest cursor-pointer transition-colors">
+<div class="w-full h-16 rounded bg-[#585E4F] mb-2.5 shadow-inner border border-outline-variant"></div>
+<div class="font-title-md text-title-md text-primary font-semibold">Sage Olive</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Satin Lacquered Birch</div>
+<span class="inline-block mt-2 font-label-sm text-label-sm text-outline">+₹8,500</span>
+</div>
+</div>
+</div>
+<!-- Finish Topcoat Type -->
+<div class="pt-4 border-t border-outline-variant">
+<label class="font-label-caps text-label-caps uppercase text-secondary block mb-2 font-bold">Surface Coating Treatment</label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:border-primary cursor-pointer transition-all bg-surface-container-lowest">
+<div class="flex items-center space-x-3">
+<input checked="" class="text-primary focus:ring-secondary" name="coating" type="radio"/>
+<div>
+<span class="font-title-md text-title-md text-primary block">Matte Acrylic Sealer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5% Sheen, water-resistant botanical wax barrier</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-outline">Standard</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:border-primary cursor-pointer transition-all bg-surface-container-lowest">
+<div class="flex items-center space-x-3">
+<input class="text-primary focus:ring-secondary" name="coating" type="radio"/>
+<div>
+<span class="font-title-md text-title-md text-primary block">Natural Wood Veneer Oil</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Open-pore tactile oil rub, hand-finished</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-semibold">+₹14,000</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:border-primary cursor-pointer transition-all bg-surface-container-lowest">
+<div class="flex items-center space-x-3">
+<input class="text-primary focus:ring-secondary" name="coating" type="radio"/>
+<div>
+<span class="font-title-md text-title-md text-primary block">Ultra-Matte FENIX NTM®</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nanotech anti-fingerprint thermal scratch healing</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-semibold">+₹26,500</span>
+</label>
+</div>
+</div>
+</div>
+<!-- TAB 2 CONTENT: Countertop Stone -->
+<div class="tab-content-pane hidden space-y-6" id="tab-content-stone">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-secondary block mb-2 font-bold">Countertop Stone Selection</label>
+<div class="space-y-3">
+<!-- Selected: Calacatta Gold Quartz -->
+<div class="p-3 rounded-lg border-2 border-primary bg-surface-container-low cursor-pointer">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Calacatta Gold Quartz</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Warm gold venation with soft gray undertones</p>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-primary text-on-primary font-semibold">Active</span>
+</div>
+<div class="mt-3 flex items-center space-x-4 text-label-sm font-label-sm text-outline">
+<span>Poreless Non-Staining</span>
+<span>·</span>
+<span>93% Crushed Quartz</span>
+</div>
+</div>
+<!-- Black Galaxy Granite -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 cursor-pointer transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Black Galaxy Granite</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deep cosmic black with copper reflective flecks</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">-₹16,000</span>
+</div>
+</div>
+<!-- Statuario Honed Marble -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 cursor-pointer transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-primary font-semibold">Statuario Honed Marble</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Quarried Carrara classic with matte velvety surface</p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">+₹48,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stone Thickness & Edge Profile -->
+<div class="pt-4 border-t border-outline-variant">
+<label class="font-label-caps text-label-caps uppercase text-secondary block mb-2 font-bold">Edge Profile &amp; Slab Gauge</label>
+<div class="grid grid-cols-2 gap-3 mb-3">
+<button class="p-2.5 rounded-lg border-2 border-primary bg-surface-container-low text-left">
+<span class="block font-title-md text-title-md text-primary font-semibold">20mm Beveled</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sleek contemporary</span>
+</button>
+<button class="p-2.5 rounded-lg border border-outline-variant text-left hover:border-primary transition-colors">
+<span class="block font-title-md text-title-md text-primary font-semibold">40mm Mitered</span>
+<span class="font-body-sm text-body-sm text-outline">+₹22,000 chunky box</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TAB 3 CONTENT: Joinery & Hardware Architecture -->
+<div class="tab-content-pane hidden space-y-6" id="tab-content-joinery">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-secondary block mb-2 font-bold">Hardware &amp; Opening Mechanism</label>
+<div class="space-y-3">
+<!-- Selected: Concealed J-Profile -->
+<div class="p-3 rounded-lg border-2 border-primary bg-surface-container-low cursor-pointer">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[22px]">horizontal_rule</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Concealed Gola Profile</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous integrated groove channel</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">check</span>
+</div>
+</div>
+<!-- J-Pull Brushed Brass -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 cursor-pointer transition-colors">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">turn_sharp_right</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">J-Pull Brushed Brass</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Architectural seamless top grip</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">+₹6,500</span>
+</div>
+</div>
+<!-- Knurled Brass Bar -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 cursor-pointer transition-colors">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">linear_scale</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Knurled Brass Bar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diamond-cut tactile solid brass rods</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">+₹14,500</span>
+</div>
+</div>
+<!-- Matte Black Edge Pull -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 cursor-pointer transition-colors">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-outline text-[22px]">border_outer</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Matte Black Edge Pull</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ultra-thin minimalist flange</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Included</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 4 CONTENT: Integrated Lighting -->
+<div class="tab-content-pane hidden space-y-6" id="tab-content-lighting">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-secondary block mb-2 font-bold">Architectural Illumination Schemes</label>
+<div class="space-y-3">
+<!-- 2700K Under Cabinet -->
+<div class="p-3 rounded-lg border-2 border-primary bg-surface-container-low">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Warm 2700K Diffused LED</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Concealed under-cabinet recessed track</p>
+</div>
+<input checked="" class="rounded text-primary focus:ring-secondary mt-1" type="checkbox"/>
+</div>
+<!-- Intensity Slider -->
+<div class="pt-2">
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant mb-1">
+<span>Luminance Level</span>
+<span class="font-semibold text-primary">85% (CRI 98)</span>
+</div>
+<input class="w-full accent-primary h-1 bg-outline-variant rounded" max="100" min="10" type="range" value="85"/>
+</div>
+</div>
+<!-- Recessed 38 deg spots -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Recessed 38° Micro Spots</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Glare-free baffle downlights over prep station</p>
+</div>
+<input checked="" class="rounded text-primary focus:ring-secondary mt-1" type="checkbox"/>
+</div>
+<span class="block mt-2 font-label-sm text-label-sm text-primary font-semibold">+₹9,500</span>
+</div>
+<!-- Suspended Brass Luminaire -->
+<div class="p-3 rounded-lg border border-outline-variant hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-title-md text-title-md text-primary font-semibold">Suspended Brass Linear Luminaire</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Architectural 1800mm floating pendant above island</p>
+</div>
+<input class="rounded text-primary focus:ring-secondary mt-1" type="checkbox"/>
+</div>
+<span class="block mt-2 font-label-sm text-label-sm text-primary font-semibold">+₹32,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Dimension Range & Metric Specs -->
+<div class="p-4 rounded-xl bg-surface-container border border-outline-variant space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Space Footprint Spec</span>
+<span class="text-label-sm font-label-sm text-outline">1:20 Elevation Scale</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2 bg-surface-container-lowest rounded border border-outline-variant">
+<span class="block font-label-sm text-label-sm text-outline">Length A</span>
+<span class="font-title-md text-title-md text-primary font-bold">3,650 mm</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded border border-outline-variant">
+<span class="block font-label-sm text-label-sm text-outline">Length B</span>
+<span class="font-title-md text-title-md text-primary font-bold">2,740 mm</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded border border-outline-variant">
+<span class="block font-label-sm text-label-sm text-outline">Ceiling H</span>
+<span class="font-title-md text-title-md text-primary font-bold">2,950 mm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inspector Panel Footer Actions -->
+<div class="p-4 border-t border-outline-variant bg-surface shrink-0 space-y-2">
+<button class="w-full bg-secondary text-on-secondary hover:bg-on-secondary-container py-3 px-4 rounded-lg font-title-md text-title-md font-semibold transition-all shadow-sm flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+<span>Apply Configuration Changes</span>
+</button>
+<button class="w-full bg-transparent hover:bg-surface-container text-on-surface-variant hover:text-primary py-2 px-4 rounded-lg font-label-sm text-label-sm transition-all border border-transparent hover:border-outline-variant">
+          Reset to Architectural Defaults
+        </button>
+</div>
+</aside>
+</main>
+<!-- BOTTOM METRICS DOCK / FOOTER BAR -->
+<footer class="h-16 bg-surface-container-high border-t border-outline-variant shrink-0 z-30 px-6 flex items-center justify-between shadow-inner">
+<!-- Left Project Metrics Cluster -->
+<div class="flex items-center space-x-8">
+<!-- Spatial Footprint -->
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-outline text-[20px]">aspect_ratio</span>
+<div>
+<span class="block text-[10px] font-label-caps text-outline uppercase tracking-wider">Spatial Footprint</span>
+<span class="font-title-md text-title-md text-primary font-semibold">12' × 9' (108 sq.ft)</span>
+</div>
+</div>
+<div class="h-6 w-px bg-outline-variant"></div>
+<!-- Lead Time Metric -->
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-outline text-[20px]">local_shipping</span>
+<div>
+<span class="block text-[10px] font-label-caps text-outline uppercase tracking-wider">Estimated Completion</span>
+<span class="font-title-md text-title-md text-primary font-semibold">28 Days White-Glove</span>
+</div>
+</div>
+<div class="h-6 w-px bg-outline-variant"></div>
+<!-- Master Warranty Badge -->
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+<div>
+<span class="block text-[10px] font-label-caps text-outline uppercase tracking-wider">Joinery Guarantee</span>
+<span class="font-title-md text-title-md text-primary font-semibold">10-Yr Master Structural</span>
+</div>
+</div>
+</div>
+<!-- Right Primary User CTA Buttons -->
+<div class="flex items-center space-x-3">
+<!-- Save to My Projects -->
+<button class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-primary text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span class="font-title-md text-title-md font-semibold">Save to My Projects</span>
+</button>
+<!-- Order Material Sample Kit CTA -->
+<button class="flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-title-md text-title-md font-semibold hover:bg-secondary-fixed-dim transition-all shadow-sm border border-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span>Order Material Sample Kit</span>
+</button>
+</div>
+</footer>
+<!-- Light interactive script for Tab switching, Viewports & Popovers -->
+<script>
+    // Tab switching for right inspector
+    function switchInspectorTab(tabId) {
+      // Hide all panes
+      const panes = document.querySelectorAll('.tab-content-pane');
+      panes.forEach(pane => pane.classList.add('hidden'));
+
+      // Deactivate all tab buttons
+      const buttons = document.querySelectorAll('.tab-pill');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      // Show selected pane
+      const targetPane = document.getElementById(`tab-content-${tabId}`);
+      if (targetPane) {
+        targetPane.classList.remove('hidden');
+      }
+
+      // Activate clicked button
+      const targetBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (targetBtn) {
+        targetBtn.classList.remove('text-on-surface-variant');
+        targetBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      }
+    }
+
+    // Camera Switcher
+    function switchView(viewName) {
+      const cameraBtns = document.querySelectorAll('.camera-btn');
+      cameraBtns.forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      });
+      event.target.classList.remove('text-on-surface-variant');
+      event.target.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+    }
+
+    // Cost Breakdown Popover Toggle
+    function toggleCostModal() {
+      const popover = document.getElementById('cost-popover');
+      if (popover) {
+        popover.classList.toggle('hidden');
+      }
+    }
+
+    // Full screen toggle helper
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+  </script>
+<script src="assets/app.js"></script></body></html>

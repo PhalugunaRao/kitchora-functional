@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kitchora — Bespoke Architectural Millwork &amp; Modular Kitchen Environments</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with CDN Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#b6d088",
+            "surface-container-low": "#f5f3f0",
+            "surface-bright": "#fbf9f6",
+            "primary": "#322214",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#fbf9f6",
+            "inverse-surface": "#30312f",
+            "primary-fixed-dim": "#dec1ac",
+            "outline-variant": "#d2c4bb",
+            "inverse-on-surface": "#f2f0ed",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#dec1ac",
+            "on-background": "#1b1c1a",
+            "surface-container-highest": "#e4e2df",
+            "surface-variant": "#e4e2df",
+            "on-surface": "#1b1c1a",
+            "on-primary": "#ffffff",
+            "secondary-container": "#fedeb2",
+            "on-secondary-fixed-variant": "#584323",
+            "on-tertiary-container": "#95ae6a",
+            "primary-container": "#4a3728",
+            "on-tertiary-fixed-variant": "#394d14",
+            "surface-container-high": "#eae8e5",
+            "secondary-fixed": "#fedeb2",
+            "surface-dim": "#dbdad7",
+            "outline": "#80756d",
+            "surface-tint": "#705a49",
+            "on-primary-container": "#bba08c",
+            "on-surface-variant": "#4e453e",
+            "on-primary-fixed-variant": "#574333",
+            "background": "#fbf9f6",
+            "tertiary-container": "#2d4108",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#e0c298",
+            "on-primary-fixed": "#28180b",
+            "on-secondary-fixed": "#281800",
+            "tertiary-fixed": "#d2eca2",
+            "on-secondary": "#ffffff",
+            "surface-container": "#efeeeb",
+            "tertiary": "#1a2a00",
+            "on-tertiary-fixed": "#131f00",
+            "on-secondary-container": "#78603e",
+            "on-error-container": "#93000a",
+            "secondary": "#725b38",
+            "primary-fixed": "#fbddc7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "gutter-desktop": "2.5rem",
+            "margin-desktop": "4rem",
+            "margin-tablet": "2.5rem",
+            "space-xs": "0.375rem",
+            "margin": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "2rem",
+            "space-xl": "3.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "display-hero": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-numeric-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-numeric-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-warm-subtle {
+      box-shadow: 0 2px 8px -2px rgba(44, 30, 20, 0.05), 0 1px 3px 0 rgba(44, 30, 20, 0.03);
+    }
+    .shadow-warm-elevated {
+      box-shadow: 0 12px 28px -6px rgba(44, 30, 20, 0.08), 0 4px 12px -2px rgba(44, 30, 20, 0.04);
+    }
+    .shadow-warm-modal {
+      box-shadow: 0 24px 48px -12px rgba(30, 35, 42, 0.14), 0 8px 16px -4px rgba(44, 30, 20, 0.04);
+    }
+    .ghost-border {
+      border: 1px solid #E8E2D9;
+    }
+  </style>
+<link rel="stylesheet" href="assets/app.css"/></head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary">
+<!-- ==================== TOP NAVIGATION BAR (SHARED COMPONENT) ==================== -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-[1440px] mx-auto h-20">
+<!-- Logo Anchor -->
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md font-semibold tracking-tight text-primary dark:text-inverse-primary flex items-center gap-2" href="#">
+<span>Kitchora</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary inline-block"></span>
+</a>
+<!-- Desktop Navigation Items -->
+<nav class="hidden lg:flex items-center space-x-7">
+<a class="text-primary dark:text-inverse-primary font-title-md text-title-md border-b-2 border-primary dark:border-inverse-primary pb-1 transition-all duration-200 ease-out" href="#designs">Designs</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#layouts">Layouts</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#materials">Materials</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#calculator">Cost Calculator</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#inspiration">Inspiration</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#planner">Virtual Planner</a>
+</nav>
+</div>
+<!-- Action Trailing Cluster -->
+<div class="flex items-center gap-4">
+<!-- Integrated Micro Search -->
+<div class="relative hidden xl:block w-48">
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-sm font-body-sm px-3 py-1.5 pl-8 rounded-lg border border-outline-variant focus:outline-none focus:border-secondary transition-colors" placeholder="Search veneers, layouts..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[18px]">search</span>
+</div>
+<!-- Trailing Icon Actions -->
+<button aria-label="Favorites" class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</button>
+<button class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant text-body-sm font-body-sm text-on-surface hover:bg-surface-container-low transition-colors duration-200">
+<span class="material-symbols-outlined text-[18px] text-secondary">compare_arrows</span>
+<span>Compare (0)</span>
+</button>
+<!-- Primary Walnut & Brass CTA -->
+<a class="bg-primary-container text-on-primary hover:bg-primary font-title-md text-title-md px-5 py-2.5 rounded-lg transition-all duration-200 ease-out shadow-warm-subtle flex items-center gap-2" href="#consultation">
+<span>Book Free Consultation</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ==================== HERO SECTION (ARCHITECTURAL 2-COLUMN) ==================== -->
+<section class="relative max-w-[1440px] mx-auto px-margin-desktop pt-12 pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Column: Architectural Thesis & Conversions -->
+<div class="lg:col-span-6 flex flex-col justify-center">
+<!-- Badge -->
+<div class="inline-flex items-center gap-2 mb-6">
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-caps text-label-caps tracking-widest rounded uppercase">Haute Menuiserie 2025</span>
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">Precision Millwork Studio</span>
+</div>
+<!-- Headline -->
+<h1 class="text-display-hero font-display-hero text-primary tracking-tight leading-[1.08] mb-6">
+          Design the Kitchen You’ll Love to Live In.
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl mb-8 leading-relaxed">
+          Heirloom-grade kitchen architectures handcrafted from honed limestone, wire-brushed walnut, and patinated brass. Engineered with millimeter-precision German hardware and bespoke interior casework tailored to your culinary rituals.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4 mb-10">
+<a class="bg-primary-container text-on-primary hover:bg-primary font-title-md text-title-md px-7 py-3.5 rounded-lg shadow-warm-subtle hover:shadow-warm-elevated transition-all duration-200 flex items-center gap-2" href="#designs">
+<span>Explore Designs</span>
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</a>
+<a class="ghost-border bg-surface-container-lowest hover:bg-surface-container-low text-primary font-title-md text-title-md px-7 py-3.5 rounded-lg transition-all duration-200 flex items-center gap-2" href="#calculator">
+<span class="material-symbols-outlined text-[20px] text-secondary">calculate</span>
+<span>Calculate Kitchen Cost</span>
+</a>
+</div>
+<!-- Trust Proof Micro Metrics -->
+<div class="pt-6 border-t border-outline-variant flex items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[26px]">verified</span>
+<div>
+<p class="text-label-caps font-label-caps text-primary tracking-wider uppercase">2,400+ Delivered</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Bespoke residences across India</p>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[26px]">shield</span>
+<div>
+<p class="text-label-caps font-label-caps text-primary tracking-wider uppercase">10-Yr Guarantee</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Precision German Blum &amp; Hettich</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Editorial Visual Canvas -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-xl overflow-hidden ghost-border shadow-warm-elevated bg-surface-container aspect-[4/3] group">
+<img alt="Luxury Architectural Kitchen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand architectural modern kitchen bathed in soft morning daylight with honed Taj Mahal quartzite waterfall island, rich fluted walnut cabinetry, patinated aged brass fixtures, minimal architectural downlighting, high-end Miele integrated appliances, and clean warm limestone flooring in an upscale luxury residence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMwR7IMZRnYttlGAQhhj3TA84YGmox290SOTixeNEE6jfTzKSOPWzWmyP_NYKPTWxymEQl6VDJOYiZ-ExHLbdR2Fu7ujy9fwtkc8ZiCaX9_ojssQtae7j-UepDVnQ0f2ac9jInfsDGDze9JPZAywofAdFJ3sr9Z66Nl3eM2Vx_y2zC1s4L7ag3GQf_3NINhpoTMKLb2Tg5jXOWJHTqfHDniOiPY4Mz-nA4KF5WamYU"/>
+<!-- Floating Spec Glassmorphism Card -->
+<div class="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-surface-container-lowest/90 ghost-border rounded-lg p-5 shadow-warm-modal transition-transform duration-300">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<p class="text-label-caps font-label-caps text-primary tracking-wider uppercase">Villa Oakhaven Specification</p>
+</div>
+<h3 class="text-title-lg font-title-lg text-primary">3BHK Modular Kitchen · 165 sq.ft</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Wire-brushed Smoked Walnut &amp; Honed Quartzite</p>
+</div>
+<div class="text-right pl-4 border-l border-outline-variant">
+<span class="text-label-caps font-label-caps text-secondary tracking-wider block uppercase">Turnkey Execution</span>
+<span class="text-headline-sm font-headline-sm text-primary">From ₹2.4L</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Architect Verified
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Ambient Accent Layer -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary-container/30 -z-10 rounded-full blur-2xl"></div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION A: POPULAR ARCHITECTURAL STYLES ==================== -->
+<section class="bg-surface-container-low py-space-xl ghost-border border-x-0" id="designs">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-label-caps font-label-caps text-secondary tracking-widest uppercase block mb-2">Curated Design Vernaculars</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Popular Architectural Kitchen Styles</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">
+          Each aesthetic system combines calibrated material palettes, concealed handle integrations, and intelligent lighting profiles.
+        </p>
+</div>
+<!-- 4-Column Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Modern Minimalist -->
+<div class="group bg-surface-container-lowest rounded-lg ghost-border overflow-hidden transition-all duration-300 hover:shadow-warm-elevated hover:-translate-y-1">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Modern Minimalist Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern minimalist luxury kitchen interior with handle-free matte porcelain cabinetry, integrated invisible induction cooktop, slim profile marble worktops, warm integrated perimeter channel lighting, pristine and uncluttered editorial atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtsiL0eBKVidT0b-PCbvs5e3sjRJCop1MVtdnmbu4Mn8eQcz3s9J2kmps_cNhGRD9q-SAFNXulkhKpCmuOxp5OIuQlYk44cmhWYPmJ0gXSc-NmWcnhyLwsXZUieW12z3yuBg649f1piJ8iWrnWuINuvEWcUYOANLI-chpWdMKMLV3ix-VjEaWfOo3IYnlyzak81-qoyljHwl3h7-_WA9keeWkKK8CVqTuej8ovpLD5"/>
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/90 backdrop-blur-sm rounded text-label-caps font-label-caps text-primary tracking-wider">42 Blueprints</span>
+</div>
+<div class="p-5">
+<h3 class="text-title-lg font-title-lg text-primary mb-1">Modern Minimalist</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Gola profile seamless cabinets, monolithic sintered stone worktops, hidden spice galleys.</p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/60">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Indicative Range</span>
+<span class="text-title-md font-title-md text-primary">From ₹2.8L</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Warm Scandinavian -->
+<div class="group bg-surface-container-lowest rounded-lg ghost-border overflow-hidden transition-all duration-300 hover:shadow-warm-elevated hover:-translate-y-1">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Warm Scandinavian Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Warm Scandinavian bespoke kitchen environment with natural pale white oak slatted paneling, honed cream terrazzo countertops, matte white fluted ceramic tiles, soft natural morning sunshine streaming through floor to ceiling windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46-dz7s_HEid-ZMb1W9XeOq3OJUh_8w_rjUOkALuH6ayqzbBPAFO4USx0R1oTQvG-W5FbPFLaVe0ucFXOsF2eGj4vaRrjQT85TkrIoIj0fLYrphVXMCu7VsxTjDA1BaDTg1KPv8TbkJPCPFVXqvozzTggw7JRkdhVRBwalhoLBjdbJwt64h-Vudf7fCJEqo1oyyGdWicEYssEOG28vGPeUTGhNNaUfDNnOZNOcisL"/>
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/90 backdrop-blur-sm rounded text-label-caps font-label-caps text-primary tracking-wider">36 Blueprints</span>
+</div>
+<div class="p-5">
+<h3 class="text-title-lg font-title-lg text-primary mb-1">Warm Scandinavian</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Natural pale oak timber, acoustic ribbed details, soft curved breakfast bar corners.</p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/60">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Indicative Range</span>
+<span class="text-title-md font-title-md text-primary">From ₹3.1L</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Bespoke Luxury -->
+<div class="group bg-surface-container-lowest rounded-lg ghost-border overflow-hidden transition-all duration-300 hover:shadow-warm-elevated hover:-translate-y-1">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Bespoke Luxury Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Bespoke luxury grand kitchen with bookmatched Calacatta Viola marble island, dark smoked burl walnut joinery, hand-brushed antique brass drawer pulls, custom glass display vitrines with warm interior lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEA1orA-wAf4JOCpV65KUYt716KhgQhDJ3JE6Lban__WhgQ9LEtysA7hETr3j6zVEoyttAXgQqXwBVNoFoxQajieyrJRP-_ZJY9tVr-TPwIhkbLhbGLkP90GAzw1kOu1Z6B0ikKEBTeeXTfiPPjOQIRAFltlsafT5cq8eWyb2P10HahfxtgjzClp-yambv8qeesmQZ3oG9l1x1e_QO8CgvhuO7kKiDa-_F91vP6rMS"/>
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/90 backdrop-blur-sm rounded text-label-caps font-label-caps text-primary tracking-wider">58 Blueprints</span>
+</div>
+<div class="p-5">
+<h3 class="text-title-lg font-title-lg text-primary mb-1">Bespoke Luxury</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Bookmatched rare marble, burl veneer inserts, motorized lift-up appliance garages.</p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/60">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Indicative Range</span>
+<span class="text-title-md font-title-md text-primary">From ₹4.8L</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Industrial Chic -->
+<div class="group bg-surface-container-lowest rounded-lg ghost-border overflow-hidden transition-all duration-300 hover:shadow-warm-elevated hover:-translate-y-1">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Industrial Chic Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Industrial chic luxury loft kitchen with gunmetal steel framed smoked fluted glass overhead cabinets, cast micro-cement textured countertops, exposed architectural dark brickwork, brushed nickel bridge faucet, dramatic moody lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaGP6ah3Q8eB85AfMyXDV7e2DsOAcpCm8XFpTWINKk86k6wwT2bxH9iCHAZi6k7soUyU_5G2J0USA1AZg1xD46Glp5D58DeoODXytNRfNGaWbvWSiKZMpAMLJoPEioIFbAXe_46KpIDWRTxJvkHa2Ha2_J-fsFMK0OWQ4YNA5rHgC3G9SO1H3kFmICBj1f1uWyU1w1sTNtQkKIqksGi2atkmFAP4jTso-Q0MWkKq6d"/>
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/90 backdrop-blur-sm rounded text-label-caps font-label-caps text-primary tracking-wider">29 Blueprints</span>
+</div>
+<div class="p-5">
+<h3 class="text-title-lg font-title-lg text-primary mb-1">Industrial Chic</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Brushed steel vitrines, concrete composite decks, open architectural blackened metal shelving.</p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/60">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Indicative Range</span>
+<span class="text-title-md font-title-md text-primary">From ₹3.4L</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION B: KITCHEN LAYOUT WORKSPACE ==================== -->
+<section class="py-space-xl max-w-[1440px] mx-auto px-margin-desktop" id="layouts">
+<div class="mb-10 text-center max-w-2xl mx-auto">
+<span class="text-label-caps font-label-caps text-secondary tracking-widest uppercase block mb-2">Ergonomic Spatial Planning</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Explore by Kitchen Layout</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-3">
+        Engineered according to the Golden Work Triangle (Prep, Cook, Storage) for optimal flow, counter-clearance, and seamless culinary choreography.
+      </p>
+</div>
+<!-- Layout Tabs Bar (Segmented Casework Style) -->
+<div class="flex justify-center mb-10">
+<div class="inline-flex p-1.5 bg-surface-container rounded-lg ghost-border gap-1" id="layout-tab-container">
+<button class="px-5 py-2.5 rounded text-title-md font-title-md bg-surface-container-lowest text-primary shadow-warm-subtle transition-all duration-200" id="btn-l-shape" onclick="switchLayout('l-shape')">
+          L-Shaped
+        </button>
+<button class="px-5 py-2.5 rounded text-title-md font-title-md text-on-surface-variant hover:text-primary transition-all duration-200" id="btn-island" onclick="switchLayout('island')">
+          Island Kitchen
+        </button>
+<button class="px-5 py-2.5 rounded text-title-md font-title-md text-on-surface-variant hover:text-primary transition-all duration-200" id="btn-parallel" onclick="switchLayout('parallel')">
+          Parallel / Galley
+        </button>
+<button class="px-5 py-2.5 rounded text-title-md font-title-md text-on-surface-variant hover:text-primary transition-all duration-200" id="btn-u-shape" onclick="switchLayout('u-shape')">
+          U-Shaped
+        </button>
+<button class="px-5 py-2.5 rounded text-title-md font-title-md text-on-surface-variant hover:text-primary transition-all duration-200" id="btn-straight" onclick="switchLayout('straight')">
+          Straight Line
+        </button>
+</div>
+</div>
+<!-- Layout Inspection Container (7/5 Asymmetrical Split Layout) -->
+<div class="bg-surface-container-lowest rounded-xl ghost-border p-8 lg:p-10 shadow-warm-subtle">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left: CAD Schematic & Elevation Diagram -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-lg p-6 lg:p-8 ghost-border relative">
+<div class="flex items-center justify-between mb-4 border-b border-outline-variant pb-3">
+<span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">architecture</span>
+              CAD Elevation &amp; Flow Analysis
+            </span>
+<span class="text-label-sm font-label-sm text-outline">Scale 1:25 Metric</span>
+</div>
+<!-- Floorplan Diagram Representation -->
+<div class="h-80 w-full relative flex items-center justify-center p-4">
+<!-- Architectural Wall Lines Vector / Markup -->
+<div class="w-full h-full border-2 border-dashed border-outline-variant rounded p-4 relative flex flex-col justify-between" id="cad-diagram">
+<!-- Top Counter Run -->
+<div class="w-full h-14 bg-surface-container-high rounded border border-outline flex items-center justify-between px-4">
+<span class="text-label-sm font-label-sm text-primary font-semibold flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span> 3200mm Main Prep Counter (Quartzite)
+                </span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-[11px] font-label-sm text-primary rounded border border-outline-variant">Integrated Sink 600mm</span>
+</div>
+<!-- Workflow Triangle Graphic Overlay -->
+<div class="relative flex-1 flex items-center justify-center py-2">
+<div class="border border-secondary/40 rounded-lg p-4 bg-secondary-container/10 flex items-center gap-6">
+<div class="text-center">
+<span class="material-symbols-outlined text-primary text-[24px]">kitchen</span>
+<p class="text-[11px] font-label-caps text-on-surface-variant uppercase mt-1">Storage</p>
+</div>
+<span class="text-outline">⟶ 1.4m ⟶</span>
+<div class="text-center">
+<span class="material-symbols-outlined text-primary text-[24px]">water_drop</span>
+<p class="text-[11px] font-label-caps text-on-surface-variant uppercase mt-1">Wash / Prep</p>
+</div>
+<span class="text-outline">⟶ 1.8m ⟶</span>
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-[24px]">skillet</span>
+<p class="text-[11px] font-label-caps text-secondary uppercase font-bold mt-1">Cook Hub</p>
+</div>
+</div>
+</div>
+<!-- Return Counter Run (L-Shape default) -->
+<div class="w-1/2 h-14 bg-surface-container-high rounded border border-outline flex items-center justify-between px-4">
+<span class="text-label-sm font-label-sm text-primary font-semibold">2100mm Cooking Wing</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-[11px] font-label-sm text-on-secondary-fixed-variant rounded">Induction 4-Zone</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-2 border-t border-outline-variant">
+<span>Minimum Aisle Clearance: <strong>1,200 mm</strong></span>
+<span>Recommended Ceiling Height: <strong>2,700 mm</strong></span>
+</div>
+</div>
+<!-- Right: Specification Intelligence & Dimension Constraints -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="inline-block px-2.5 py-1 bg-surface-container rounded text-label-caps font-label-caps text-primary uppercase tracking-wider mb-3">
+              Ergonomic Spec Sheet
+            </div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3" id="layout-title">
+              L-Shaped Architectural Configuration
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6" id="layout-desc">
+              The consummate choice for open-concept 2BHK and 3BHK residences. By utilizing two adjoining perimeter walls, it eliminates corner dead space via patented LeMans corner carousel joinery while preserving generous circulation to the living salon.
+            </p>
+<!-- Metric Specification Matrix -->
+<div class="space-y-3 mb-8">
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded ghost-border">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Recommended Floor Area</span>
+<span class="text-title-md font-title-md text-primary" id="layout-area">110 — 160 sq.ft</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded ghost-border">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Work Triangle Circumference</span>
+<span class="text-title-md font-title-md text-secondary" id="layout-triangle">5.2 Meters (Optimal)</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded ghost-border">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Base Run Capacity</span>
+<span class="text-title-md font-title-md text-primary" id="layout-capacity">14 Dedicated Drawers + 2 Pantries</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-primary-container text-on-primary hover:bg-primary font-title-md text-title-md px-6 py-3 rounded-lg transition-colors flex-1 text-center shadow-warm-subtle" href="#planner">
+              Configure This Layout
+            </a>
+<button class="ghost-border p-3 rounded-lg text-primary hover:bg-surface-container transition-colors" title="Download CAD Reference Sheet">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION C: TRENDING ARCHITECTURAL PROJECTS ==================== -->
+<section class="bg-surface-container-low py-space-xl ghost-border border-x-0">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-label-caps font-label-caps text-secondary tracking-widest uppercase block mb-2">Commissioned Residences</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Trending Architectural Kitchen Projects</h2>
+</div>
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-secondary font-title-md text-title-md transition-colors mt-4 md:mt-0" href="#designs">
+<span>View Archive Monograph</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 3-Column Masonry Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1: Warm Walnut Contemporary -->
+<article class="bg-surface-container-lowest rounded-xl ghost-border overflow-hidden shadow-warm-subtle hover:shadow-warm-elevated transition-all duration-300 flex flex-col">
+<div class="relative aspect-[16/11] bg-surface-container overflow-hidden group">
+<img alt="Warm Walnut Contemporary Kitchen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern warm walnut contemporary kitchen with seamless horizontal wood grain matching, quartz slab splashback, soft ambient ceiling trough lighting, matte black tapware, beautifully staged with ceramic vessel on the honed counter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCazZWWbC3-gGd5ajfKJKl6L5Oa43S5GEqQUuyvw2uoH4eWviAjwl8XUHB-YCUu8mH2exY18PtUl0b34YkAZHbV0WohkDoHDZOWPz9Do0g3HPmEVO9JN8nYnT7JGMg3woLFAWYKfGVcejMHyrgxWM7oig9amiMb6sYQKc12llFCUlmthmWonWuvdc9lXlybTYeBeguN2Hx0J6N5THmRrtWmXowDzJpW-PUiZ1RE611_"/>
+<div class="absolute top-3 right-3 flex gap-2">
+<button aria-label="Save project" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-error transition-colors ghost-border">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<button aria-label="Compare project" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-secondary transition-colors ghost-border">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+</button>
+</div>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 bg-primary text-on-primary text-label-caps font-label-caps rounded uppercase">L-Shaped · 120 sq.ft</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm text-primary">Warm Walnut Contemporary</h3>
+<span class="text-label-caps font-label-caps text-secondary">Mumbai Penthouse</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5">
+                American walnut crown-cut veneer treated with zero-VOC biological oil finish. Calacatta Gold sintered stone counters with integrated dish draining channels.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Turnkey Realization</span>
+<span class="text-title-lg font-title-lg text-primary">₹3.2L — ₹4.1L</span>
+</div>
+<button class="ghost-border hover:bg-surface-container-low px-4 py-2 rounded text-body-sm font-body-sm text-primary transition-colors flex items-center gap-1">
+<span>View Specification</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 2: Nordic Minimalist Oak -->
+<article class="bg-surface-container-lowest rounded-xl ghost-border overflow-hidden shadow-warm-subtle hover:shadow-warm-elevated transition-all duration-300 flex flex-col">
+<div class="relative aspect-[16/11] bg-surface-container overflow-hidden group">
+<img alt="Nordic Minimalist Oak Kitchen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Nordic minimalist light oak parallel kitchen layout with pristine white quartz surfaces, recessed architectural strip lights under cupboards, stainless steel integrated gas hob, calm scandinavian aesthetic with neutral beige wall tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORnHimiU1ERRxDk5OvU0EYdpQdzlUdHbdknBeEQyERZz9OLjAyoyIMf74-xsLU0jYgDrBEvxLv_0G8dKT8ziAvB4BtJX5ggrRG91z4VXBHYwRyt_7RVeY1SwYmGxUJTrCY2JVFpQCMRAwchY_5BIkCNgl5WAzXSVvQBwW9tlQgU0W6F_tOxECVMMek3-mXSCfpAml5UNyqGo0-txbXnz5jh7nF1lWKxtzz_N5bHJZ"/>
+<div class="absolute top-3 right-3 flex gap-2">
+<button aria-label="Save project" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-error transition-colors ghost-border">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<button aria-label="Compare project" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-secondary transition-colors ghost-border">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+</button>
+</div>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 bg-primary text-on-primary text-label-caps font-label-caps rounded uppercase">Parallel · 95 sq.ft</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm text-primary">Nordic Minimalist Oak</h3>
+<span class="text-label-caps font-label-caps text-secondary">Bengaluru Villa</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5">
+                European white oak combined with FENIX NTM anti-fingerprint thermal matte laminate. Blum Aventos HF bi-fold lift-up upper cabinetry.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Turnkey Realization</span>
+<span class="text-title-lg font-title-lg text-primary">₹2.8L — ₹3.5L</span>
+</div>
+<button class="ghost-border hover:bg-surface-container-low px-4 py-2 rounded text-body-sm font-body-sm text-primary transition-colors flex items-center gap-1">
+<span>View Specification</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 3: Noir Slate & Brass Island -->
+<article class="bg-surface-container-lowest rounded-xl ghost-border overflow-hidden shadow-warm-subtle hover:shadow-warm-elevated transition-all duration-300 flex flex-col">
+<div class="relative aspect-[16/11] bg-surface-container overflow-hidden group">
+<img alt="Noir Slate &amp; Brass Island" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Moody noir slate and brushed brass grand kitchen island featuring matte charcoal black cabinetry, fluted nero marquina marble front, unlacquered aged brass faucet, warm pendant light fixtures hanging low over counter in a luxury apartment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdj5_cFoDaj1OBvJdWxS5vDCcp08CefOVEpvz24YxJ2fb5V3HmR5lmTrwzBrmL9eUVYbm0m8zk27tAu8XyEu24VWpyZ538RdVtHByQFDvFQxtpmF25w8jBIt_mMpkJKNQ95qec6krLkM11nPhSvcm-uuSNEjopEAPY5np1DWcL4WtkZvfk71oN5EEV-G1Y16gyiR_ur2H3ZAhLmcuyixgMXRnuXGVl6NvT3TwUdQpc"/>
+<div class="absolute top-3 right-3 flex gap-2">
+<button aria-label="Save project" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-error transition-colors ghost-border">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<button aria-label="Compare project" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary hover:text-secondary transition-colors ghost-border">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+</button>
+</div>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 bg-primary text-on-primary text-label-caps font-label-caps rounded uppercase">Island · 180 sq.ft</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm text-primary">Noir Slate &amp; Brass Island</h3>
+<span class="text-label-caps font-label-caps text-secondary">New Delhi Estate</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5">
+                Cast graphite ceramic surfaces with solid knurled patinated brass hardware. Dual wine storage climate zones integrated into island casework.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Turnkey Realization</span>
+<span class="text-title-lg font-title-lg text-primary">₹5.4L — ₹6.8L</span>
+</div>
+<button class="ghost-border hover:bg-surface-container-low px-4 py-2 rounded text-body-sm font-body-sm text-primary transition-colors flex items-center gap-1">
+<span>View Specification</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION D: ORDER HONED SWATCH BOX ==================== -->
+<section class="py-space-xl max-w-[1440px] mx-auto px-margin-desktop" id="materials">
+<div class="bg-primary text-on-primary rounded-2xl overflow-hidden shadow-warm-modal relative">
+<!-- Decorative Backdrop Element -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-12 lg:p-16">
+<!-- Left: Editorial Value Proposition -->
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-label-caps font-label-caps rounded uppercase font-bold tracking-widest">
+              Tactile Verification Box
+            </span>
+<span class="text-outline-variant text-body-sm font-body-sm">· Deliverable to Your Residence</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg text-surface-bright tracking-tight mb-4">
+            Experience the Weight and Grain in Your Home Lighting.
+          </h2>
+<p class="text-body-lg font-body-lg text-outline-variant mb-8 max-w-xl">
+            Order our curated Material Atelier Kit: 4 handcrafted natural timber veneers (Walnut, Smoked Oak, Birch), 2 honed engineered quartz slabs (Taj Mahal, Pure Carrara), and 3 precision cast brass and gunmetal J-pull profile samples.
+          </p>
+<!-- Swatch Pill Grid -->
+<div class="grid grid-cols-3 gap-4 mb-8 max-w-lg">
+<div class="bg-surface/10 rounded-lg p-3 text-center border border-surface/20">
+<span class="block text-surface-bright font-title-md text-title-md">4 Swatches</span>
+<span class="text-[11px] text-outline-variant uppercase font-label-caps">Crown Veneers</span>
+</div>
+<div class="bg-surface/10 rounded-lg p-3 text-center border border-surface/20">
+<span class="block text-surface-bright font-title-md text-title-md">2 Stones</span>
+<span class="text-[11px] text-outline-variant uppercase font-label-caps">Honed Quartz</span>
+</div>
+<div class="bg-surface/10 rounded-lg p-3 text-center border border-surface/20">
+<span class="block text-surface-bright font-title-md text-title-md">3 Hardware</span>
+<span class="text-[11px] text-outline-variant uppercase font-label-caps">Patinated Brass</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-5">
+<button class="bg-secondary hover:bg-secondary-fixed-dim text-surface-container-lowest hover:text-primary font-title-md text-title-md px-8 py-3.5 rounded-lg transition-all duration-200 shadow-warm-elevated flex items-center gap-2">
+<span>Order Swatch Box — ₹499</span>
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline-variant">
+              *100% credited against your final architectural millwork order.
+            </span>
+</div>
+</div>
+<!-- Right: Swatch Visual Canvas -->
+<div class="lg:col-span-5 relative">
+<div class="rounded-xl overflow-hidden border border-surface/20 shadow-warm-elevated aspect-[4/3] bg-surface-container-highest">
+<img alt="Honed Swatch Box Materials" class="w-full h-full object-cover" data-alt="Architectural material sample kit laid out neatly on a table with pieces of dark walnut wood veneer, light white marble slab samples, textured stone tiles, and metallic brushed brass cabinet handles in high key studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeIFE71-noJgSl6c6wGla_6xDRaUahhaXh6idgv1bYjd0TxNrM4nJGA-271znkigvSq6Sj8IRBQ1UVHwIzUzZStWHk4ENzV15AWFupJbytZBX-wCiV1MGQkatqLhv7L2W2cPnxKrRwybQvXc5HtaWxu-fn13UT4zpribUbx9g5E_0AfmgL3qk2y8-M3zAj0qpTGnTpU7xAeJH00t5R7xwLo5byFjdCro_DMnN53Vk-"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION E: 3D SCAN & ON-SITE CONSULTATION ==================== -->
+<section class="bg-surface-container-low py-space-xl ghost-border border-b" id="consultation">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Imagery: Laser Scanner & Spatial Measuring -->
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="relative rounded-xl overflow-hidden ghost-border shadow-warm-elevated aspect-[4/3] bg-surface-container">
+<img alt="Architectural Laser Measurement" class="w-full h-full object-cover" data-alt="Professional architect on site in a modern apartment using a precision Leica 3D laser scanner tripod measuring exact kitchen dimensions with architectural blueprints and clipboard resting on an unfinished counter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC77vRx0Kz-Q5hCxdvc0p2xwIqFCHrFpz7OPRuRkCwtW4jDxSIftk40o_ptMZqk-lM-9tuE9yyGaEn_b-BYdLlpnJ2lx4EejXYRr3w641WpmIuhS_zwasxlnSIXu6wgLdgVv1-5qpwBryScvJJ4Te7R9MiV7QpHqnOA956DC-8BUNm0ISaIrhqqkP0x5mj9zLml7U5CoA7Iy6H9FPyC2Jx7MdQBgjx7R2_wdnpaF6Ro"/>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-4 rounded ghost-border shadow-warm-subtle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">square_foot</span>
+<div>
+<h4 class="text-title-md font-title-md text-primary">Sub-millimeter LiDAR Accuracy</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Guarantees zero on-site cutting or dusty modifications during installation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content: On-Site Service -->
+<div class="lg:col-span-6 order-1 lg:order-2">
+<span class="text-label-caps font-label-caps text-secondary tracking-widest uppercase block mb-2">Zero-Tolerance Joinery</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-5">
+            On-Site Laser Measurement &amp; Spatial 3D Scan
+          </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-6">
+            Bespoke millwork cannot tolerate generic builder measurements. Our senior technical architects visit your apartment with calibrated digital survey instrumentation to audit plumbing offsets, electrical raceways, and wall true-angles.
+          </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1 text-[20px]">check</span>
+<div>
+<strong class="text-title-md font-title-md text-primary">Full 3D Point-Cloud Cloud Generation:</strong>
+<span class="text-body-md font-body-md text-on-surface-variant"> Detects micro-deflections in wall plumbness before factory milling.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1 text-[20px]">check</span>
+<div>
+<strong class="text-title-md font-title-md text-primary">M&amp;E Utility Audit:</strong>
+<span class="text-body-md font-body-md text-on-surface-variant"> Seamless routing for high-wattage induction, RO water purifier, and chimneys.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1 text-[20px]">check</span>
+<div>
+<strong class="text-title-md font-title-md text-primary">Interactive 1:1 VR Walkthrough:</strong>
+<span class="text-body-md font-body-md text-on-surface-variant"> Review cabinet door openings and ergonomic reach heights in virtual space.</span>
+</div>
+</li>
+</ul>
+<div class="flex items-center gap-4">
+<a class="bg-primary-container text-on-primary hover:bg-primary font-title-md text-title-md px-7 py-3.5 rounded-lg shadow-warm-subtle transition-all duration-200" href="#consultation">
+              Schedule Studio or Site Visit
+            </a>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Complimentary with every specification inquiry.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== FOOTER (SHARED COMPONENT) ==================== -->
+<footer class="bg-surface-container-high dark:bg-inverse-surface border-t border-outline-variant dark:border-outline flat no shadows">
+<div class="w-full px-margin-desktop py-space-xl max-w-[1440px] mx-auto">
+<!-- Top Atelier Header & Primary Brand Presence -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 pb-12 border-b border-outline-variant dark:border-outline">
+<div class="md:col-span-4">
+<span class="text-headline-lg font-headline-lg text-primary dark:text-inverse-primary block mb-3">Kitchora</span>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-inverse-on-surface max-w-sm mb-4">
+            Handcrafted Architectural Millwork &amp; Modular Kitchen Environments. Engineered with exacting German joinery tolerances and organic material integrity.
+          </p>
+<div class="flex items-center gap-2 text-label-caps font-label-caps text-primary dark:text-inverse-primary tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 25-Year Master Joinery Warranty
+          </div>
+</div>
+<!-- Studio Coordinates -->
+<div class="md:col-span-4">
+<span class="text-label-caps font-label-caps text-primary dark:text-inverse-primary tracking-widest uppercase block mb-3">Atelier Locations</span>
+<div class="space-y-3 text-body-sm font-body-sm text-on-surface-variant dark:text-inverse-on-surface">
+<div>
+<p class="font-semibold text-primary dark:text-inverse-primary">Paris Studio &amp; Prototyping Workshop</p>
+<p>448 Rue Saint-Honoré, 75001 Paris, France</p>
+</div>
+<div>
+<p class="font-semibold text-primary dark:text-inverse-primary">New York Presentation Gallery</p>
+<p>520 Madison Ave, New York, NY 10022</p>
+</div>
+<div>
+<p class="font-semibold text-primary dark:text-inverse-primary">India Fabrication &amp; Engineering Center</p>
+<p>Plot 48, Udyog Vihar Phase IV, Gurugram / Mumbai Studio</p>
+</div>
+</div>
+</div>
+<!-- Architectural Specifications Navigation -->
+<div class="md:col-span-4">
+<span class="text-label-caps font-label-caps text-primary dark:text-inverse-primary tracking-widest uppercase block mb-3">Architectural Directory</span>
+<div class="grid grid-cols-2 gap-2">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm text-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#specifications">Architectural Specifications</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm text-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#finishes">Bespoke Finishes</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm text-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#library">Material Library</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm text-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#warranty">Warranty &amp; Care</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm text-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#press">Press &amp; Monograph</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm text-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#contact">Contact Atelier</a>
+</div>
+</div>
+</div>
+<!-- Legal & Copyright -->
+<div class="flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-on-surface-variant dark:text-inverse-on-surface gap-4">
+<p class="text-center md:text-left">
+          © 2025 Kitchora Atelier. Handcrafted Architectural Millwork &amp; Modular Kitchen Environments. 25-Year Master Joinery Warranty. Atelier: 448 Rue Saint-Honoré, Paris &amp; 520 Madison Ave, New York.
+        </p>
+<div class="flex items-center gap-6 shrink-0">
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Master Terms</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">CAD Download Portal</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Script for Layout CAD Switcher -->
+<script>
+    const layoutData = {
+      'l-shape': {
+        title: 'L-Shaped Architectural Configuration',
+        desc: 'The consummate choice for open-concept 2BHK and 3BHK residences. By utilizing two adjoining perimeter walls, it eliminates corner dead space via patented LeMans corner carousel joinery while preserving generous circulation to the living salon.',
+        area: '110 — 160 sq.ft',
+        triangle: '5.2 Meters (Optimal)',
+        capacity: '14 Dedicated Drawers + 2 Pantries'
+      },
+      'island': {
+        title: 'Central Monolithic Island Configuration',
+        desc: 'Conceived for expansive multi-generational entertaining. Features an isolated social prep island with waterfall stone returns, integrated cantilevered breakfast overhang, and dedicated utility perimeter run.',
+        area: '180 — 320 sq.ft',
+        triangle: '6.4 Meters (Zoned)',
+        capacity: '22 Drawers + Integrated Wine Chiller + Walk-in Pantry'
+      },
+      'parallel': {
+        title: 'Parallel / Double Galley Configuration',
+        desc: 'The gold standard in high-output culinary efficiency. Adopted by Michelin-star chefs for direct parallel transitions between wet cooking counters and food prep zones, maximizing wall yield in compact luxury footprints.',
+        area: '85 — 140 sq.ft',
+        triangle: '4.1 Meters (High Efficiency)',
+        capacity: '16 Drawers + Concealed Appliance Garage'
+      },
+      'u-shape': {
+        title: 'U-Shaped Continuous Enclosure',
+        desc: 'Enveloping workspace with three uninterrupted runs of cabinetry. Delivers maximal surface square-footage, segregated cleaning and prep sectors, and an intimate, secluded culinary environment.',
+        area: '140 — 220 sq.ft',
+        triangle: '5.8 Meters (Balanced)',
+        capacity: '20 Drawers + 2 Corner Flying-Ovals'
+      },
+      'straight': {
+        title: 'Straight Line / Studio Monolith',
+        desc: 'Linear purity engineered for architectural lofts and minimalist urban suites. Every function—refrigeration, induction, extraction, and sink—is unified within a singular streamlined joinery elevation.',
+        area: '60 — 100 sq.ft',
+        triangle: '3.6 Meters (Linear Vector)',
+        capacity: '10 Drawers + Vertical Larder Tower'
+      }
+    };
+
+    function switchLayout(layoutKey) {
+      // Toggle button styles
+      ['l-shape', 'island', 'parallel', 'u-shape', 'straight'].forEach(key => {
+        const btn = document.getElementById('btn-' + key);
+        if (key === layoutKey) {
+          btn.className = "px-5 py-2.5 rounded text-title-md font-title-md bg-surface-container-lowest text-primary shadow-warm-subtle transition-all duration-200";
+        } else {
+          btn.className = "px-5 py-2.5 rounded text-title-md font-title-md text-on-surface-variant hover:text-primary transition-all duration-200";
+        }
+      });
+
+      // Update content
+      const data = layoutData[layoutKey];
+      document.getElementById('layout-title').innerText = data.title;
+      document.getElementById('layout-desc').innerText = data.desc;
+      document.getElementById('layout-area').innerText = data.area;
+      document.getElementById('layout-triangle').innerText = data.triangle;
+      document.getElementById('layout-capacity').innerText = data.capacity;
+    }
+  </script>
+<script src="assets/app.js"></script></body></html>

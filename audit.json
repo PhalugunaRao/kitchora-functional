@@ -1,0 +1,26 @@
+[
+  {
+    "source": "kitchora_luxury_home_experience_desktop/code.html",
+    "page": "index.html",
+    "placeholder_links": 4,
+    "buttons": 18
+  },
+  {
+    "source": "kitchora_architectural_design_detail_desktop/code.html",
+    "page": "design.html",
+    "placeholder_links": 15,
+    "buttons": 20
+  },
+  {
+    "source": "kitchora_architectural_design_detail_desktop/code copy.html",
+    "page": "planner.html",
+    "placeholder_links": 0,
+    "buttons": 23
+  },
+  {
+    "source": "kitchora_kitchen_cost_calculator_desktop/code.html",
+    "page": "calculator.html",
+    "placeholder_links": 17,
+    "buttons": 7
+  }
+]
